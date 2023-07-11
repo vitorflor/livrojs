@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmacia JS</title>
+    <title>Lan House JS</title>
 </head>
 <body>
-    <h1>Farmacia JS</h1>
+    <h1>Lan house JS</h1>
     <form>
-        <p>Medicamento:
-            <input type="text" id="inRemedio" required>
+        <p>Valor por 15min de uso:
+            <input type="number" id="inTempo" min="1" step="0.01" required>
         </p>
-        <p>Preço R$:
+        <p>Tempo de uso do cliente:
             <input type="text" id="inPreco" min="0" required>
         </p>
-        <input type="submit" value="Ver Promoção">
+        <input type="submit" value="Calcular Preço">
     </form>
     <h3 id="outResp1"></h3>
-    <h3 id="outResp2"></h3>
-    <script src="js/ex2_5.a.js"></script>
+    <script src="js/ex2_5.b.js"></script>
 </body>
 </html>
