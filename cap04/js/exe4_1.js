@@ -13,9 +13,9 @@ frm.addEventListener("submit", (e) => {
     resp1.innerText = `media da(o) ${nome} é: ${media.toFixed(2)}`
     //cria as condições
     if (media >= 7) {
-    resp2.innerText = `parabens voce foi aprovado(a)`
+    resp2.innerText = `Parabens ${nome} você foi aprovado(a)`
     resp2.style.color = "green"
-    } else if (media<=4) {
+    } else if (media>=4) {
         resp2.innerText = `Você está em exame`
         resp2.style.color = "yellow"
     } else{
