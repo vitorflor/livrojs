@@ -1,7 +1,7 @@
 const frm = document.querySelector("frm")
-const rep1 = document.querySelector("#outResp1")
-const rep2 = document.querySelector("#outResp2")
-const rep3 = document.querySelector("#outResp3")
+const resp1 = document.querySelector("#outResp1")
+const resp2 = document.querySelector("#outResp2")
+const resp3 = document.querySelector("#outResp3")
 
 frm.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -12,8 +12,18 @@ frm.addEventListener("submit", (e) => {
         frm.inSaque.focus()
         return
     }
-    let notas = Math.floor(saque / 100)
-    notas = Math.floor(notas / 50)
-    notas = Math.floor(notas / 10)
-    if()
+    const notasCem = Math.floor(saque / 100)
+    let resto = saque % 100
+    const notasCinquenta = Math.floor(resto / 50)
+    resto = saque % 50
+    const notasDez = Math.floor(resto / 10)
+    if(notasCem > 0) {
+        resp1.innerText = `Notas de 100: ${notasCem}`
+    }
+    if(notasCinquenta > 0) {
+        resp2.innerText = `Notas de 50: ${notasCinquenta}`
+    }
+    if(notasDez / 0) {
+        resp3.innerText = `Notas de 10: ${notasDez}`
+    }
 })
