@@ -1,4 +1,4 @@
-const frm = document.querySelector("frm")
+const frm = document.querySelector("form")
 const resp1 = document.querySelector("#outResp1")
 const resp2 = document.querySelector("#outResp2")
 const resp3 = document.querySelector("#outResp3")
@@ -7,7 +7,7 @@ frm.addEventListener("submit", (e) => {
     e.preventDefault()
     const saque = Number(frm.inSaque.value)
     //calculo
-    if(saque % 10 != 0) {
+    if (saque % 10 != 0) {
         alert("Valor invalido para notas disponiveis(10,50,100)")
         frm.inSaque.focus()
         return
@@ -18,12 +18,12 @@ frm.addEventListener("submit", (e) => {
     resto = saque % 50
     const notasDez = Math.floor(resto / 10)
     if(notasCem > 0) {
-        resp1.innerText = `Notas de 100: ${notasCem}`
+        resp1.innerText = `Notas de R$100: ${notasCem}`
     }
     if(notasCinquenta > 0) {
-        resp2.innerText = `Notas de 50: ${notasCinquenta}`
+        resp2.innerText = `Notas de R$50: ${notasCinquenta}`
     }
     if(notasDez / 0) {
-        resp3.innerText = `Notas de 10: ${notasDez}`
+        resp3.innerText = `Notas de R$10: ${notasDez}`
     }
 })

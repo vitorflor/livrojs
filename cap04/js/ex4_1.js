@@ -14,12 +14,12 @@ frm.addEventListener("submit", (e) => {
     //cria as condições
     if (media >= 7) {
     resp2.innerText = `Parabens ${nome} você foi aprovado(a)`
-    resp2.style.color = "green"
+    //resp2.style.color = "green"
     } else if (media>=4) {
         resp2.innerText = `Você está em exame`
-        resp2.style.color = "yellow"
+       // resp2.style.color = "yellow"
     } else{
         resp2.innerText = `Voce foi reprovado(a)`
-        resp2.style.color = "red"
+        //resp2.style.color = "red"
     }
 })
