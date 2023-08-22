@@ -10,7 +10,6 @@ frm.addEventListener("submit", (e) => {
     //calculo
     if(velcondutor - velpermitida >= 0) {
         resp.innerText = `Situação: Sem multa!`
-        resp.style.color = "blue"
     } else if (VelCondutor <= maisVinte) {
         resp.innerText= `Situação: Multa Leve!`
     } else
