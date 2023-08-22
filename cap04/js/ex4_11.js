@@ -1,15 +1,18 @@
 const frm = document.querySelector("form")
-const resp1 = document.querySelector("outResp1")
-const resp2 = document.querySelector("outResp2")
-const resp3 = document.querySelector("outResp3")
+const resp = document.querySelector("h3")
 
 frm.addEventListener("submit", (e) => {
     e.preventDefault()
 
     const velpermitida = Number(frm.inVelpermitida.value)
     const velcondutor = Number(frm.inVelcondutor.value)
+    const maisVinte = VelPermitida * 1.20
     //calculo
     if(velcondutor - velpermitida >= 0) {
-        resp1.innerText = `Situação: Sem multa`
-    } else if(velcondutor - velpermitida >)
+        resp.innerText = `Situação: Sem multa!`
+        resp.style.color = "blue"
+    } else if (VelCondutor <= maisVinte) {
+        resp.innerText= `Situação: Multa Leve!`
+    } else
+        resp.innerText= `Situação: Multa grave!`
 })
