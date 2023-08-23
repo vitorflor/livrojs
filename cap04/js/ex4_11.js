@@ -6,12 +6,13 @@ frm.addEventListener("submit", (e) => {
 
     const velpermitida = Number(frm.inVelpermitida.value)
     const velcondutor = Number(frm.inVelcondutor.value)
-    const maisVinte = VelPermitida * 1.20
+    const maisVinte = velpermitida * 1.20
     //calculo
-    if(velcondutor - velpermitida >= 0) {
+    if(velpermitida - velcondutor >= 0) {
         resp.innerText = `Situação: Sem multa!`
-    } else if (VelCondutor <= maisVinte) {
+    } else if (velcondutor <= maisVinte) {
         resp.innerText= `Situação: Multa Leve!`
-    } else
+    } else {
         resp.innerText= `Situação: Multa grave!`
+    }
 })
